@@ -1,0 +1,41 @@
+# ======================
+# Python cache files
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ======================
+# Virtual environment
+# ======================
+venv/
+env/
+ENV/
+.venv/
+
+# ======================
+# Editor and OS files
+# ======================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ======================
+# Results and outputs
+# ======================
+results/
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.xlsx
+*.h5
+*.log
+
+# ======================
+# Token / secrets (if any)
+# ======================
+*.env
+.env
