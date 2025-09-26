@@ -25,12 +25,12 @@ if __name__ == "__main__":
         np.array([8.0, 0.0]),
     ]
 
-    # Run one interactive simulation using best PID
+ 
     simulate_pid_on_multiple_goals(
         Kp=Kp, Ki=Ki, Kd=Kd,
         goals=goals,
         visualize=True,
         save_video=False,
-        loop=True  # ✅ enable infinite loop for interactive display
+        loop=True  
     )
 

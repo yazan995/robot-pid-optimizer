@@ -54,9 +54,9 @@ def simulate_pid_on_multiple_goals(Kp, Ki, Kd, goals, visualize=False, save_vide
             if current_mode != last_mode:
                 if current_mode in pid_cache:
                     best_pid = pid_cache[current_mode]
-                    print(f"🧠 Loaded cached PID for mode: {current_mode}")
+                    print(f"Loaded cached PID for mode: {current_mode}")
                 else:
-                    print(f"🔄 Mode changed to: {current_mode} — optimizing PID...")
+                    print(f"Mode changed to: {current_mode} — optimizing PID...")
                     best_pid = genetic_optimization(
                         population_size=6,
                         generations=5,

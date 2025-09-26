@@ -65,7 +65,7 @@ def genetic_optimization(
         population.append((Kp, Ki, Kd))
 
     for gen in range(generations):
-        print(f"\n🧬 Generation {gen + 1} for mode: {mode}")
+        print(f"\n Generation {gen + 1} for mode: {mode}")
         scored = []
         for Kp, Ki, Kd in population:
             fitness, t, error = evaluate_pid(Kp, Ki, Kd)
@@ -106,7 +106,7 @@ def genetic_optimization(
         plot_fitness(best_fitness_history, mode)
 
     final_fitness, time, err = evaluate_pid(*best)
-    print(f"\n✅ Best PID for mode '{mode}': Kp={best[0]}, Ki={best[1]}, Kd={best[2]}")
+    print(f"\n Best PID for mode '{mode}': Kp={best[0]}, Ki={best[1]}, Kd={best[2]}")
     return best
 
 def plot_fitness(best_fitness_history, mode="default", output_dir="results"):

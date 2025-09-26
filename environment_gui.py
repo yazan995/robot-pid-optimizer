@@ -8,10 +8,10 @@ current_mode = tk.StringVar(value="normal")
 
 def set_mode(mode):
     current_mode.set(mode)
-    print(f"✅ Environment mode changed to: {mode}")
+    print(f"Environment mode changed to: {mode}")
 
 def get_mode():
-    return current_mode.get()  # ✅ نوفر دالة للوصول من الخارج
+    return current_mode.get()
 
 label = tk.Label(root, text="Select Environment Mode:", font=("Arial", 14))
 label.pack(pady=10)

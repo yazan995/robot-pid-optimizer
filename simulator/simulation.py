@@ -1,34 +1,32 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Try to import environment mode from GUI
 try:
     from environment_gui import get_mode
 except ImportError:
     def get_mode():
-        return "normal"  # fallback mode if GUI is not running
+        return "normal"
 
 
 class RobotSimulator:
     def __init__(self, dt=0.1):
         self.x = 0.0
         self.y = 0.0
-        self.theta = 0.0  # robot orientation
+        self.theta = 0.0
         self.dt = dt
         self.path = [(self.x, self.y)]
-        self.t = 0.0  # simulation time
+        self.t = 0.0
 
     def step(self, v, omega):
         """Single simulation step, affected by environment mode"""
         mode = get_mode()
 
         if mode == "heavy":
-            v *= 0.5  # slower movement under heavy load
+            v *= 0.5
         elif mode == "slippery":
-            omega *= 0.3  # reduced turning ability
-            omega = np.clip(omega, -2.5, 2.5)  # يسمح بتوجيه أوسع عند الانزلاق
+            omega *= 0.3
+            omega = np.clip(omega, -2.5, 2.5)
 
-        # Apply motion update
         self.x += v * np.cos(self.theta) * self.dt
         self.y += v * np.sin(self.theta) * self.dt
         self.theta += omega * self.dt
