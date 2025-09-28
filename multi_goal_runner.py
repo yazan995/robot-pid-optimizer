@@ -134,7 +134,6 @@ def simulate_pid_on_multiple_goals(
         if not loop:
             break
 
-    # حفظ النتائج
     os.makedirs("results", exist_ok=True)
     try:
         df = pd.DataFrame(results)
