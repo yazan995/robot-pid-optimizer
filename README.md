@@ -20,8 +20,8 @@ The system allows interactive testing in different environments: **Normal**, **H
 
 ```bash
 # 1) Clone and enter the project
-git clone https://github.com/yazan995/robot-pid-ga-simulation.git
-cd robot-pid-ga-simulation
+git clone https://github.com/yazan995/robot-pid-optimizer-master.git
+cd robot-pid-optimizer-master
 
 # 2) Create a virtual environment and install dependencies
 py -3.12 -m venv .venv
