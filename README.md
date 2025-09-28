@@ -16,19 +16,24 @@ The system allows interactive testing in different environments: **Normal**, **H
 
 ---
 
-▶️ How to Run
+▶ How to Run (Windows, Python 3.12)
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yazan995/robot-pid-ga-simulation.git
-   cd robot-pid-ga-simulation
-2. Install required Python packages:
-pip install -r requirements.txt
-3. Run the main script:
-python test_optimizer.py
-4. During simulation:
-Use the GUI to switch between environments (Normal / Heavy Load / Slippery).
-The system will automatically re-optimize PID parameters using the Genetic Algorithm.
+```bash
+# 1) Clone and enter the project
+git clone https://github.com/yazan995/robot-pid-ga-simulation.git
+cd robot-pid-ga-simulation
+
+# 2) Create a virtual environment and install dependencies
+py -3.12 -m venv .venv
+.venv\Scripts\python -m pip install --upgrade pip setuptools wheel
+.venv\Scripts\python -m pip install -r requirements.txt
+
+# 3) Run the main entry point
+.venv\Scripts\python test_optimizer.py
+```
+
+During simulation:
+- Use the GUI to switch between environments: Normal / Heavy Load / Slippery.
 
 ---
 📊 Outputs
@@ -42,7 +47,7 @@ Videos (MP4/GIF) visualizing the robot’s path under different environments.
 ---
 ⚙️ Requirements
 
-Python 3.9+
+Python 3.9+ (tested on Python 3.12, Windows 10/11)
 
 Required libraries:
 
@@ -50,7 +55,7 @@ numpy
 
 matplotlib
 
-tkinter (comes with Python standard library)
+tkinter (comes with Python standard library; on Linux may require separate installation)
 
 pandas
 
